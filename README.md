@@ -1,5 +1,121 @@
 # algorithms-datastructures
 
+## Bubble Sort
+```
+Function bubbleSort(arr) {
+	Let noSwap = true;
+	Const swap = (arr, i,j) => {
+		[arr[i], arr[j]] = [arr[j], arr[i]]
+}
+for(let i=arr.length;i>0;i--) {
+	noSwap = true
+	for(j=0;j<i-1;j++) {
+		if(arr[j] > arr[j+1]) swap(arr,j,j+1)
+		noSwap = false
+}
+if(noSwap) break;
+}
+Return arr
+}
+```
+
+## Selection Sort
+```
+Function selectionSort(arr) {
+	Let lowest = Infinity;
+	Const swap = (arr, i, j) => {
+		[arr[i], arr[j]] = [arr[j], arr[i]]
+}
+for(let i=0;i<arr.length;i++)  {
+		Lowest = i;
+		for(let j = i+1; j<arr.length;j++) {
+			if(arr[j]<arr[lowest] lowest = j
+}
+if(i!== lowest) swap(arr,i,j)
+	}
+	Return arr
+}
+```
+
+## Insertion Sort
+```
+Function insertionSort(arr) {
+	for(let i=1;i<arr.length;i++) {
+		currentVal = arr[i]
+		for(let j=i-1;j>=0 && arr[j] > currentVal; j--) {
+			Arr[j+1] = arr[j]
+		}
+		Arr[j+1] = currentVal
+
+}
+Return arr
+}
+```
+
+## Merge Sort
+```
+Function merge(arr1, arr2) {
+	Let i=0;
+	Let j=0;
+	Const result = []
+	while(i<arr1.length && j<arr2.length) {
+		if(arr1[i]<arr2[j]) {
+			result.push(arr1[i])
+			i++
+		} else {
+			result.push(arr2[j])
+			j++
+		}
+	}
+	while(i<arr1.length) {
+		result.push(arr1[i])
+		i++
+}
+	while(j<arr2.length) {
+		result.push(arr2[j])
+		j++
+}
+Return result
+}
+
+Function mergeSort(arr) {
+	if(arr.length <= 1) return arr
+	Let mid = Math.floor(arr.length/2)
+	Let left = mergeSort(arr.slice(0,mid))
+	Let right = mergeSort(arr.slice(mid))
+	Return merge(left, right)
+}
+```
+
+## Quick Sort
+```
+Function pivot(arr, start = 0, end = arr.length-1) {
+	Const swap = (arr, i, j) => {
+		[arr[i], arr[j]] = [arr[j],arr[i]]
+	}
+
+	Let pivot = arr[start]
+	Let swapIdx = start
+
+	for(let i=start+1;i<=end;i++) {
+		if(pivot > arr[i]) {
+			swapIdx++;
+			swap(arr, swapIdx, i)
+		}
+	}
+	swap(arr, start, swapIdx)
+	Return arr
+}
+
+Function quickSort(arr, left = 0, right = arr.length=1) {
+	if(left < right) { 
+		Let pivotIndex = pivot(arr, left, right) 
+		quickSort(arr, left, pivotIndex-1)
+		quickSort(arr, pivotIndex+1, right)
+	}
+	Return arr
+}
+```
 
 ## Singly Linked List
 ```
