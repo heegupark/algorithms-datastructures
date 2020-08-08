@@ -6,16 +6,16 @@ Function bubbleSort(arr) {
 	Let noSwap = true;
 	Const swap = (arr, i,j) => {
 		[arr[i], arr[j]] = [arr[j], arr[i]]
-}
-for(let i=arr.length;i>0;i--) {
-	noSwap = true
-	for(j=0;j<i-1;j++) {
-		if(arr[j] > arr[j+1]) swap(arr,j,j+1)
-		noSwap = false
-}
-if(noSwap) break;
-}
-Return arr
+	}
+	for(let i=arr.length;i>0;i--) {
+		noSwap = true
+		for(j=0;j<i-1;j++) {
+			if(arr[j] > arr[j+1]) swap(arr,j,j+1)
+			noSwap = false
+	}
+	if(noSwap) break;
+	}
+	Return arr
 }
 ```
 
@@ -25,13 +25,13 @@ Function selectionSort(arr) {
 	Let lowest = Infinity;
 	Const swap = (arr, i, j) => {
 		[arr[i], arr[j]] = [arr[j], arr[i]]
-}
-for(let i=0;i<arr.length;i++)  {
+	}
+	for(let i=0;i<arr.length;i++)  {
 		Lowest = i;
 		for(let j = i+1; j<arr.length;j++) {
 			if(arr[j]<arr[lowest] lowest = j
-}
-if(i!== lowest) swap(arr,i,j)
+		}
+		if(i!== lowest) swap(arr,i,j)
 	}
 	Return arr
 }
@@ -46,9 +46,8 @@ Function insertionSort(arr) {
 			Arr[j+1] = arr[j]
 		}
 		Arr[j+1] = currentVal
-
-}
-Return arr
+	}
+	Return arr
 }
 ```
 
@@ -70,12 +69,12 @@ Function merge(arr1, arr2) {
 	while(i<arr1.length) {
 		result.push(arr1[i])
 		i++
-}
+	}
 	while(j<arr2.length) {
 		result.push(arr2[j])
 		j++
-}
-Return result
+	}
+	Return result
 }
 
 Function mergeSort(arr) {
