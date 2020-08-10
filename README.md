@@ -22,7 +22,7 @@ Function bubbleSort(arr) {
 ## Selection Sort
 ```
 Function selectionSort(arr) {
-	Let lowest = Infinity;
+	Let lowest = null;
 	Const swap = (arr, i, j) => {
 		[arr[i], arr[j]] = [arr[j], arr[i]]
 	}
